@@ -1,17 +1,18 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[77]:
+# In[2]:
 
 
 #import libraries
 import numpy as np
 import matplotlib.pyplot as plt 
+get_ipython().run_line_magic('matplotlib', 'inline')
 import pandas as pd
 
 #import daily returns
 import xlrd
-wb = xlrd.open_workbook('/Users/isaacmartin/Desktop/Python/Files/SCHG.xlsx')
+wb = xlrd.open_workbook('/Users/isaacmartin/Desktop/Python/Files/AAPL.xlsx')
 ws = wb.sheet_by_index(0)
 data = ws.col_values(0)
 
@@ -20,11 +21,11 @@ std = np.std(data)
 mean = np.mean(data)
 
 #assumptions
-S = 129.21
-K = 129
-days = 5
+S = 122.54
+K = 123
+days = 3
 t = 1/252
-r = .08
+r = .04
 
 #generate stock prices & call values
 p = 0
